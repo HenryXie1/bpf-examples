@@ -71,6 +71,7 @@ func main() {
 
 	// passing -1 for maxActive signifies to use the default
 	// according to the kernel kprobes documentation
+	//
 	err = m.AttachKprobe(syscallName, helloKprobe, -1)
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Failed to attach helloKprobe: %s\n", err)
